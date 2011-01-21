@@ -1,0 +1,24 @@
+---
+layout: post
+title: Processing: Menggambar dengan algoritma
+---
+
+[caption id="attachment_49" align="alignnone" width="515" caption="Gambar 1: Contoh hasil dari Processing"]<img class="size-full wp-image-49" title="Screenshot" src="http://dwiasharialdy.net/wp-content/uploads/2008/06/filename-0436.png" alt="Screenshot" width="515" height="300" />[/caption]
+
+<a title="Processing website" href="http://processing.org">Processing</a> adalah sebuah bahasa pemprograman open source yang ditujukan khusus untuk para desiner/seniman yang menggunakan komputer/software sebagai media kreativitasnya. Penggunaan komputer disini bukanlah seperti seorang artis menggunakan Adobe Illustrator untuk membuat sebuah gambar vektor, tetapi lebih kepada seorang artis menggunakan bahasa pemprograman (tentu saja dengan menulis algoritmanya) untuk membuat gambar/animasi. Biasanya hal seperti ini disebut sebagai computational art atau generative art atau algorithmic art. Jika anda tidak mengenal term tersebut, anda pasti pernah melihat visualisasi pada Winamp atau media player lainnya. Ya, kira-kira seperti itulah generative art. Menurut saya hal ini sangatlah unik, karena untuk untuk membuat karya tersebut sangat dibutuhkan kerjasama antara otak kanan dan otak kiri yang baik.
+
+Kembali kepada Processing. Processing dikembangkan diatas Java sehingga tak heran jika syntax dan aturan mainnya pun sangat mirip dengan java. Saat di-compile pun, output yang dihasilkan adalah file berbentuk java aplet untuk diimplementasikan di web dan 3 buah file executable untuk 3 flatform berbeda (windows, mac &amp; linux).
+
+Karena sasarannya adalah artis, maka processing didesain secara sederhana dengan syntax yang cukup simple dan human-readable (setidaknya untuk seniman digital) serta IDE yang sangat sederhana (pula). IDE tersebut hanya terdiri dari sebuah text editor untuk mengedit source-code, sebuah toolbar dan sebuah panel console ditambah dengan sebuah window yang akan muncul jika project di-run.
+
+[caption id="attachment_50" align="alignnone" width="515" caption="Gambar 2: Processing IDE"]<img class="size-full wp-image-50" title="Processing IDE" src="http://dwiasharialdy.net/wp-content/uploads/2008/06/untitled_copy.jpg" alt="Processing IDE" width="515" height="408" />[/caption]
+
+Sebenarnya Processing bukanlah bahasa pemprograman pertama yang ditujukan bagi dunia seni. Beberapa diantaranya adalah ActionScript, design by number dan lingo. Karena sebelumnya saya tidak pernah menggunakan Design by Number dan Lingo, saya tidak dapat memberikan perbandingan dengan Processing. Namun saya cukup mengenal ActionScript sehingga saya bisa berpendapat keduanya memiliki beberapa kelebihan dan kekurangan.
+
+Salah satu keunggulan Processing dibandingkan dengan ActionScript/flash adalah processing dikembangkan diatas teknologi java, sehingga untuk menangani pengolahan data yang cukup besar, processing akan lebih unggul dibandingkan dengan flash/ActionScript (karena pemprograman untuk generative art biasanya menggunakan jumlah data yang cukup besar dengan looping yang cukup banyak pula). Selain itu syntax pada processing lebih mudah dimengerti oleh kalangan non-programmer jika dibandingkan dengan flash/ActionScript.
+
+Namun jika melihat kepopuleran tentu saja Flash/ActionScript lebih populer dibandingkan dengan processing (sejauh ini saya telah lebih banyak melihat web berisi flash dibanding web berisi java aplet).
+
+Tapi, jika anda merasa penasaran dengan Processing, saya anjurkan anda untuk mendownloadnya di <a title="http://processing.org" href="http://processing.org" target="_blank">http://processing.org</a>. Di dalam paket yang didownload tersebut terdapat banyak contoh aplikasi yang telah berhasil membuat saya takjub. Selain itu, saya menganjurkan anda untuk mengunjungi situs berikut: <a title="http://www.openprocessing.org/" href="http://www.openprocessing.org/">http://www.openprocessing.org/</a> dan <a title="http://www.tom-carden.co.uk/processingblogs/" href="http://www.tom-carden.co.uk/processingblogs/">http://www.tom-carden.co.uk/processingblogs/</a>
+
+Oh iya, gambar pada permulaan artikel ini adalah karya pertama saya menggunakan processing. Karya ini adalah modifikasi dari salah satu contoh yang disertakan dalam paket installasi Processing. Jika anda ingin mencoba java apletnya, silakan klik <a href="http://lab.dwiasharialdy.net/2008.06.02/00/" target="_blank">disini</a>.

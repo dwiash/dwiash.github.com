@@ -1,0 +1,16 @@
+---
+layout: post
+title: Aksara sunda dalam unicode
+---
+
+[caption id="attachment_55" align="alignnone" width="495" caption="Gambar 1: Contoh Aksara Sunda"]<img class="size-full wp-image-55" title="Aksara Sunda" src="http://dwiasharialdy.net/wp-content/uploads/2009/01/aksara_sunda.png" alt="Gambar 1: Contoh Aksara Sunda" width="495" height="116" />[/caption]
+
+Berawal ketika saya menggunakan aplikasi "Character Map" di ubuntu, saya menemukan bahwa di dalam ubuntu yang saya gunakan ternyata terdapat character set untuk sundanese script atau aksara sunda. Saya tidak tahu apakah memang secara default ubuntu menyertakan karakter set tersebut atau karena saya telah menginstalkan language support untuk Bahasa indonesia sehingga character set untuk aksara sunda tersedia di komputer saya. Namun yang pasti ini adalah hal yang benar-benar baru bagi saya.
+
+Pada saat itu character set untuk aksara sunda memang telah tersedia, namun bentuk karakternya sendiri belum ada, yang ada hanya rangkaian bilangan hexadesimal yang merepresentasikan karakter-karakter tersebut dalam format UTF-16. Hal itu disebabkan karena belum ada font yang memiliki karakter-karakter tersebut. Setelah googling, akhirnya saya menemukan font aksara sunda pada alamat: http://daluang.com/gembolan-paket-unicode-aksara-sunda-v100. Setelah download dan install, akhirnya saya bisa melihat dan menggunakan karakter-karakter tersebut di ubuntu saya.
+
+[caption id="attachment_57" align="alignnone" width="500" caption="Gambar 2: Karakter Aksara Sunda"]<img class="size-full wp-image-57" title="Aksara Sunda" src="http://dwiasharialdy.net/wp-content/uploads/2009/01/aksarasunda.png" alt="Gambar 2: Karakter Aksara Sunda" width="500" height="396" />[/caption]
+
+Ya! ini memang aksara sunda seperti yang biasa saya lihat di beberapa papan nama jalan di kota bandung.
+
+Aksara sunda ini sendiri resmi masuk ke dalam sistem unicode pada bulan april 2008, setelah sebelumnya pada tahun 2006 proposal untuk slot aksara sunda di Unicode diajukan. Dengan masuknya aksara sunda ke dalam blok unicode diharapkan dapat membantu pelestarian budaya bangsa indonesia, karena dengan adanya aksara sunda pada sistem unicode, dapat mempermudah penggunaan aksara sunda, khususnya pada media elektronik. Sebelum aksara sunda, aksara bali dan bugis telah terlebih dahulu masuk kedalam sistem unicode. Namun yang saya heran, ternyata aksara jawa belum ada di sistem unicode, padahal sebelumnya saya mengira aksara jawa terlebih dahulu masuk di sistem unicode. Karena pada kenyataannya penggunaan aksara sunda masih sedikit dibandingkan dengan penggunaan aksara jawa, mungkin bisa antara bandung dan jogjakarta dalam penggunaan aksara masing-masing daerah tersebut.

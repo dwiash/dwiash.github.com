@@ -1,0 +1,22 @@
+---
+layout: post
+title: Situs yang terlupakan
+---
+
+Beberapa waktu yang lalu saya sempat lupa jikalau saya mempunyai sebuah situs – sebuah situs yang terlupakan, lebih tepatnya. Saya mendapatkan kembali ingatan saya mengenai situs yang seharusnya saya kelola ini ketika salah seorang kolega menyindir saya karena saya tidak pernah meng-update situs ini – padahal beliaupun tak jauh berbeda dengan saya, malas untuk meng-update situsnya sendiri. Tapi tak mengapa, toh akhirnya saya malah merasa diingatkan untuk memanfaatkan apa yang telah saya miliki, yang telah dibeli dan dibangun dengan sejumput kerja keras dan semangat (halah!?!?!).
+
+Jika anda lihat, entry terakhir yang saya tulis sebelum entry ini adalah sebuah entry yang diposting pada bulan juni, dan sekarang adalah bulan nopember, Wow!! Saya ternyata membutuhkan 4 bulan untuk kembali mengisi situs ini, hmm dasar pemalas! contoh yang sangat buruk (harap untuk tidak meniru perbuatan sayah). Saking lamanya saya tidak menyentuh situs ini, saya mengalami kesulitan dalam mengakses halaman admin situs ini karena saya lupa password untuk masuk ke halaman adminnya. Tapi untungnya saya masih bias mengakses cpanel-nya sehingga saya bisa mengubah passwordnya secara manual di database-nya menggunakan phpmyadmin, lagi-lagi contoh yang buruk, jangan ditiru!
+
+Setelah berhasil masuk ke halaman admin, saya mulai memeriksa situs ini, dan ternyata ditemukan beberapa comment yang berasal dari beberapa kolega saya dan comment yang bersifat spam. Ketika melihat statistik pada halaman admin dan google webmaster tool, ternyata situs saya ini lumayan juga untuk sebuah situs yang tak terawat. Terdapat beberapa orang (yang nyasar) mengunjungi situs ini. Dan ternyata untuk beberapa keyword pada bulan-bulan kemaren, situs ini pernah menduduki posisi 10 besar di halaman search resultnya google terutama keyword "dwi asharialdy" (nya heueuh lah, saha deui nu boga ngaran kitu??). Tapi setidaknya ini menjadi penyemangat untuk kembali menghidupkan situs ini.
+
+Baiklah, Semangat!! Semoga untuk hari-hari kedepan, saya mempunyai sesuatu yang dapat saya share kepada anda di situs ini. Oh iya, jika anda ingin mengetahui apa saja yang tengah saya lakukan dan saya gandrungi akhir-akhir ini, berikut penjelasannya.
+
+Di sektor akademik, saat ini saya tengah mempelajari dan mengkaji berbagai hal mengenai semantic web, karena ini adalah tema seminar yang saya pilih. Selain itu, saat inipun saya tengah mempelajari nonrelation database, data warehouse+datamining dan beberapa topik lainnya yang terkait dengan matakuliah yang tengah saya kontrak.
+
+Di sektor karir, saya masih kerja di gagasimaji. Saat ini kami tengah mempersiapkan untuk membuat sebuah produk (pertama) kami, dan saya tengah sibuk mempersiapkan web service dan framework yang akan kami gunakan untuk membangun produk ini.
+
+Di sektor kesehatan, beberapa hari yang lalu saya menderita diare yang berkomplikasi dengan mag. Rasanya sangat menyiksa, dan saya tidak menganjurkan kepada anda untuk mengidap penyakit diare (walaupun saat ini sedang nge-trend)  karena rasanya sangat tidak enak dan menyiksa, membuat tubuh anda lemah hingga menurunkan tekanan darah.
+
+Sementara sisanya, saat ini saya sedang menggalakan penggunaan linux di kehidupan saya. Dari mulai kebutuhan kuliah hingga pekerjaan, saya mengusahakan untuk mengerjakannya di linux. Linux yang saat ini saya pakai adalah mandriva 2009.0, tapi rencananya mau ganti ke ubuntu 8.10 begitu downlodan di kantor beres (hehehe).
+
+Oh iya, jika anda yang memiliki informasi terkait berbagai hal yang tengah saya geluti, tolong di share yah. Terimakasih.

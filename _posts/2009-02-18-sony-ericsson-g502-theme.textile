@@ -1,0 +1,12 @@
+---
+layout: post
+title: Sony Ericcson G502 Theme
+---
+
+Ini adalah tema yang saya buat untuk Sony Ericsson G502 saya. Saya membuatnya menggunakan Theme Creator dari Sony Ericsson. Tema yang saya buat ini mengikuti aturan dari Theme Developer guidelines yang saya peroleh dari http://www.sonyericsson.com/developer. Tema ini menggunakan standard theme versi 4.6 sehingga selain untuk seri G502, jika tidak ada bug, maka selayaknya tema ini pun kompatible untuk seri: K660, K850, W760, W890, W910, Z750 dan Z770 .
+
+Berikut adalah screen shot yang saya ambil dari theme creator untuk tema yang saya buat – bukan dari telepon genggam saya. Jika anda memiliki salah satu seri Sony Ericsson yang telah saya sebutkan diawal dan ingin mencoba tema ini, silahkan ikuti <a href="/files/Tidak-Rapih.thm" target="_blank">tautan ini</a>.
+
+[caption id="attachment_59" align="alignnone" width="505" caption="gambar 1: Screenshot"]<img class="size-full wp-image-59" title="Screenshot" src="http://dwiasharialdy.net/wp-content/uploads/2009/02/tidak-rapih.png" alt="gambar 1: Screenshot" width="505" height="665" />[/caption]
+
+Jika anda tertarik untuk mengembangkan tema ataupun aplikasi untuk telepon selular dari Sony Ericsson, saya menyarankan anda untuk mengunjungi situs http://www.sonyericsson.com/developer. Di dalam situs tersebut terdapat resource lengkap mengenai berbagai hal yang mungkin anda butuhkan dalam mengembangkan tema ataupun aplikasi Sony Ericsson.

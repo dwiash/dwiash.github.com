@@ -1,0 +1,18 @@
+---
+layout: post
+title: OpenID
+---
+
+Beberapa waktu yang lalu saya mencoba Drupal versi 6 (saya tidak akan membahas Drupal versi 6). Salah satu fitur baru yang pertama kali terlihat adalah login menggunakan OpenID. Sebenarnya sebelum itu saya pernah mendengar, atau lebih tepatnya membaca sekilas tentang OpenID namun saat itu saya tidak begitu memperhatikan tulisan tersebut sehingga saya tidak paham dengan apa yang disebut OpenID. Akhirnya setelah melakukan penelusuran lebih lanjut pada berbagai situs, saya menemukan bahwa OpenID adalah sebuah solusi yang secara tak sadar saya (atau mungkin juga anda?) butuhkan selama ini untuk melakukan berbagai aktifitas di dunia maya.
+
+Lalu apa yang dimaksud dengan OpenID ?
+
+Baiklah, secara kasar saya pikir OpenID dapat dikatakan sebuah distributed single account system. Jika anda seorang mahasiswa sebuah universitas mungkin anda memiliki hal serupa di kampus anda. Anda memiliki sebuah KTM (Kartu Tanda Mahasiswa) dan KTM tersebut dapat digunakan untuk berbagai urusan misalnya mengakses system informasi kampus anda, untuk meminjam buku di perpustakaan dan lain sebagainya. Kira-kira seperti itulah OpenID, hanya saja OpenID digunakan di Internet. Dengan OpenID anda hanya perlu memiliki satu OpenID untuk login ke berbagai situs berbeda, sehingga anda tidak perlu lagi melakukan registrasi setiap akan menjadi member dari sebuah situs dan lebih penting lagi, anda tidak perlu mengingat userid dan password untuk tiap situs yang berbeda.
+
+Karena OpenID adalah sebuah system yang terdistribusi, maka untuk mendapatkan sebuah OpenID anda bisa melakukan registrasi pada beberapa situs (biasanya disebut sebagai OpenID identity provider). Saat ini telah banyak identity provider yang dapat anda gunakan, pilihlah yang menurut anda dapat dipercaya (list lengkap mengenai provider yang dapat anda gunakan dapat anda temukan pada : http://wiki.openid.net/OpenIDServers). Namun jika anda telah memiliki account pada situs-situs seperti: AOL, Flickr, LiveDoor, LiveJournal, Orange.fr, SmugMug, Vox, Yahoo dan wordpress.com, maka anda tidak perlu lagi melakukan registrasi untuk mendapatkan OpenID karena anda telah memilikinya (atau hanya perlu mengaktifkan account anda agar dapat digunakan sebagai OpenID).
+
+Bagaimana cara menggunakan OpenID?
+
+Untuk menggunkan OpenID, hal pertama yang harus anda lakukan adalah melakukan registrasi pada salah satu OpenID identity provider, namun hal ini tak perlu saya bahas karena saya pikir proses registrasinya bisa saja tidak beda jauh dengan proses registrasi pada system lainnya. Namun menggunakannya, saya pikir adalah sebuah hal yang cukup unik dan berbeda.
+
+Setelah anda teregistrasi dan memiliki sebuah ID, maka anda telah siap untuk menggunakannya. Anda hanya dapat menggunakan OpenID pada situs yang telah terintegrasi dengan OpenID. Situs yang telah terintegrasi dengan OpenID biasanya pada bagian loginnya terdapat sebuah link atau field untuk “login with openID” atau hal lain yang serupa. Disinilah saya pikir keunikan OpenID, untuk melakukan login, anda hanya dipersilahkan untuk mengisi satu field

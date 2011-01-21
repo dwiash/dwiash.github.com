@@ -1,0 +1,32 @@
+---
+layout: post
+title: Debugging menggunakan Krumo
+---
+
+Bagi saudara/i yang akrab dengan bahasa pemprograman PHP pasti tidak asing lagi dengan fungsi <code>print_f()</code> atau <code>var_dump()</code>. Kedua fungsi tersebut biasa digunakan untuk melakukan debugging, yaitu untuk mengetahui isi (value) dari suatu peubah dalam bentuk array atau object.
+
+Salah satu contoh penggunaanya adalah seperti berikut ini. Misalnya untuk menampilkan isi dari peubah <code>$_SERVER</code> (merupakan peubah yang berisi informasi seputar server yang digunakan oleh PHP), maka berikut adalah kode PHP-nya:
+
+<pre>print '&lt;pre&gt;';
+print_r($_SERVER);
+print '&lt;/pre&gt;';</pre>
+
+Dan berikut adalah hasil yang akan diperoleh (hanya sebagian yang ditampilkan. berhubung sangat panjang dan memakan banyak tempat):
+
+[caption id="attachment_65" align="alignnone" width="339" caption="Gambar 1: Hasil print_r()"]<img class="size-full wp-image-65" title="Screenshot" src="http://dwiasharialdy.net/wp-content/uploads/2009/08/Screenshot.png" alt="Gambar 1: Hasil print_r()" width="339" height="230" />[/caption]
+
+Cara seperti ini memang cukup effisien dalam melakukan debugging. Namun terkadang dengan banyaknya jumlah elemen array yang dikandung pada suatu varibale dapat menyebabkan hasil dari print_r() sulit terbaca/dipahami dengan baik. Saya pun sering mengalami kesulitan dalam memahami isi dari suatu array yang sangat besar hingga akhirnya saya menemukan <a title="Krumo" href="http://krumo.sourceforge.net/" target="_blank">Krumo</a>. Seperti yang tercantum pada situsnya, Krumo merupakan pengganti dari print_r() atau var_dump(). Krumo menampilkan isi dari peubah array atau objek dengan tampilan yang enak dilihat dan mudah dibaca. Cara penggunaanya pun sangat mudah, yaitu dengan memanggil terlebih dahulu file <code>class.krumo.php</code> lalu panggil fungsi <code>krumo()</code> dan mengisinya argumennya dengan peubah yang akan di-krumo-kan.
+
+Misalnya untuk kasus peubah $_SERVER, berikut adalah kode-nya:
+
+<pre>include("class.krumo.php");
+krumo($_SERVER);</pre>
+
+Dan berikut adalah hasil dari kode diatas:
+
+[caption id="attachment_66" align="alignnone" width="462" caption="Gambar 2: Tampilan Krumo"]<img class="size-full wp-image-66 " title="Screenshot-1" src="http://dwiasharialdy.net/wp-content/uploads/2009/08/Screenshot-1.png" alt="Gambar 2: Tampilan Krumo" width="462" height="329" />[/caption]
+
+Isi dari peubah $_SERVER ditampikan pada suatu tampilan yang lebih enak dilihat. Tampilannya berbentuk seperti <em>collapsible tree</em> pada suatu file browser, dimana dapat dilakukan drilldown untuk melihat isi/value dari item yang berada dilevel yang lebih dalam lagi. Cukup menarik bukan? tak adalagi text dalam bentuk <em>preformated</em> yang cukup sulit dibaca.
+
+Untuk mengetahui lebih jauh lagi mengenai Krumo beserta fitur-fitur lain yang dimilikinya, anda dapat mengunjungi situs proyek Krumo pada alamat <a title="Krumo" href="http://krumo.sourceforge.net/">http://krumo.sourceforge.net/</a>
+

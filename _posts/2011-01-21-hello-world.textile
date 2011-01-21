@@ -3,8 +3,4 @@ layout: post
 title: Hello World!
 ---
 
-h1. {{ page.title }}
-
-p(meta). 21 January 2011 - Cimahi
-
 Mulai blogging menggunakan Github 

@@ -1,0 +1,70 @@
+---
+layout: post
+title: Mengunduh di linux
+---
+
+Pada artikel ini saya akan membahas mengenai teknik-teknik dalam mengunduh di Linux. Saya tidak akan membahas mengenai aplikasi-aplikasi download manager di Linux, melainkan saya akan membahas mengenai pemanfaatan perkakas seadanya yang telah tersedia secara default di Linux untuk mengunduh berkas.
+
+Perkakas yang dimaksud adalah <code>wget</code>, shell script dan <code>crontab</code>. ketiga <em>benda</em> tersebut, biasanya telah tersedia secara default pada setiap sistem operasi berbasis linux (atau mungkin juga Unix). <code>wget</code> adalah sebuah aplikasi command-line yang berfungsi untuk mengunduh file, aplikasi ini sangat sederhana namun cukup fleksibel dan stabil untuk mengunduh file berukuran besar sekalipun. Perkakas kedua adalah Shell Script, yang merupakan bahasa scripting yang dapat diaplikasikan/dijalakan pada shell Unix (bash, sh atau shell Unix yang lainnya). Dan yang terakhir adalah <code>crontab</code> yang merupakan sebuah utility untuk mengatur penjadwalan. <code>crontab</code> dapat digunakan untuk menjadwalkan pengeksekusian aplikasi sehingga kita hanya perlu memberitahukan kapan saja suatu aplikasi harus dijalankan untuk kemudian <code>cron</code> akan mengeksekusi aplikasi tersebut pada waktu yang telah ditentukan.
+<h3>Hanya mengunduh satu berkas</h3>
+Tidak dibutuhkan teknik khusus jika hanya mengunduh satu berkas saja. Untuk melakukannya cukup ketikan perintah <code>wget</code> diikuti oleh URL berkas yang dimaksud pada terminal linux anda. berikut adalah contohnya:
+<pre>$ wget http://suatusitus.com/suatu/file.ext</pre>
+Ini adalah cara paling sederhana dalam menggunakan <code>wget</code>. Dengan perintah diatas, <code>wget</code> hanya akan mengunduh file hingga selesai. Kelemahan dari perintah di atas adalah tidak <em>resumable</em>, sehingga ia akan mengulang kembali dari nol jika ia terhenti ditengah jalan. Untuk mengatasi hal tersebut, pergunakanlah opsi <code>-c</code> atau <code>--continue</code> sebelum URL berkas.
+<pre>$ wget -c http://suatusitus.com/suatu/file.ext</pre>
+atau
+<pre>$ wget --continue http://suatusitus.com/suatu/file.ext</pre>
+Dengan perintah tersebut, jika terjadi sesuatu yang mengakibatkan wget berhenti (apakah disengaja atau tidak disengaja), maka wget dapat meneruskan hasil unduhannya tanpa mengulang dari nol.
+
+Selain opsi <code>-c</code>, sebenarnya terdapat beberapa opsi lain yang sangat berguna, diantaranya <code>--limit-rate</code> yang berfungsi untuk membatasi kecepatan unduh yang digunakan, opsi <code>--user</code> dan <code>--password</code> yang dapat digunakan jika situs terkait meminta autentikasi dari usernya. Untuk lebih lengkapnya dapat anda peroleh dengan mengetikan perintah berikut pada command-line
+<pre>$ man wget</pre>
+<h3>Mengunduh beberapa berkas (batch download)</h3>
+Terdapat dua cara untuk melakukan batch download menggunakan wget. Cara pertama dengan mengetikkan setiap URL berkas secara langsug pada command-line setelah perintah wget.
+<pre>$ wget -c http://situs.com/file1.zip http://situs.com/file2.zip http://situs.com/file2.zip</pre>
+Cara tersebut cukup efektif jika jumlah berkas yang akan diunduh tidak terlalu banyak. Namun jika jumlah berkas yang hendak diunduh berjumlah puluhan atau lebih, maka cara ini sangatlah tidak efektif karena akan sangat sulit untuk mengetikan alamat URL-nya. Oleh karena itu, untuk melakukan pengunduhan berkas dalam jumlah yang besar, dibutuhkan cara kedua.
+
+Cara kedua ini menggunakan shell script untuk menampung perintah wget sebanyak jumlah berkas yang akan diunduh. Untuk lebih jelasnya, berikut adalah sebuah contoh berkas shell script yang digunakan untuk batch download.
+<pre>#!/bin/bash
+wget -c http://situs.com/file1.zip
+wget -c http://situs.com/file2.zip
+wget -c http://situs.com/file3.zip
+wget -c http://situs.com/file4.zip
+wget -c http://situs.com/file5.zip
+wget -c http://situs.com/file6.zip
+wget -c http://situs.com/file7.zip
+wget -c http://situs.com/file8.zip
+wget -c http://situs.com/file9.zip
+wget -c http://situs.com/file10.zip
+wget -c http://situs.com/file11.zip
+wget -c http://situs.com/file12.zip</pre>
+Baris pertama pada script tersebut merupakan <a href="http://en.wikipedia.org/wiki/Shebang_%28Unix%29" target="_blank">shebang</a> yang menginstruksikan bahwa script tersebut harus diperlakukan sebagai sebuah shell script. Kemudian baris berikutnya merupakan perintah-perintah yang akan dieksekusi oleh shell, dalam hal ini adalah <code>wget</code>. Jika berkas shell script tersebut disimpan dengan nama <code>download.sh</code>, maka untuk menjalankannya kita hanya perlu mengeksekusi baris berikut pada terminal:
+<pre>$ ./download.sh</pre>
+Shell akan mengeksekusi perintah-perintah yang ada pada shell script tersebut sehingga semua file yang ditulis pada script tersebut diunduh satu-persatu.
+
+Dengan menggunakan shell script, kita pun dapat menambahkan beberapa teknik pemprogramman untuk memperingkas isi shell script tersebut. Salah satu contohnya adalah dengan menggunakan pengulangan jika berkas-berkas yang akan diunduh memiliki nama yang sekuensial seperti pada contoh diatas. Berikut adalah bentuk yang lebih ringkas untuk contoh tersebut.
+<pre>#!/bin/bash
+for i in `seq 1 12`;
+do
+  wget -c http://situs.com/file$i.zip
+done</pre>
+<h3>Menjadwal pengunduhan</h3>
+Teknik terakhir yang mungkin saja anda butuhkan adalah menjadwal pengunduhan. Saya sendiri biasanya menggunakan penjadwalan untuk mengunduh berkas yang cukup besar, misalnya CD image. Saya biasanya menjadwalkan pengunduhan pada pagi-pagi sekitar pukul 2 pagi, ketika sudah tidak ada lagi yang menggunakan internet di rumah saya. Namun sebelumnya saya harus membiarkan komputer saya tetap menyala sehingga jika telah mencapai pukul 2 pagi, cron akan mengeksekusi perintah untuk mengunduh yang sebelumnya telah disiapkan.
+
+Penjadwalan ini dilakukan dengan bantuan dari crontab. Untuk menggunakannya, kita hanya perlu memasukan entry mengenai waktu dan program yang akan dijalankan pada crontab. Untuk membuka crontab, cukup ketikan perintah berikut di command-line:
+<pre>$ crontab -e</pre>
+Perintah tersebut akan membukakan crontab pada sebuah text editor pilihan anda. Begitu text editor telah siap, tinggal masukan entry untuk waktu serta program yang akan dijadwalkan dalam format seperti berikut:
+<pre>* * * * * /path/to/script.sh</pre>
+Kelima bintang tersebut merepresentasikan tingkatan waktu dari menit, jam, hari (perbulan), bulan serta hari dalam seminggu. Untuk lebih jelasnya, misalnya untuk kasus saya yang telah saya sebutkan sebelumnya (setiap pukul 2 pagi), maka berikut adalah entri pada crontab-nya:
+<pre>0 2 * * * /path/to/script.sh</pre>
+Tentu saja <code>/path/to/script.sh</code> harus diganti dengan alamat berkas shell script yang berisi perintah untuk mengunduh (seperti pada teknik sebelumnya).
+
+Contoh lainnya, jika anda ingin menjadwalkan pada setiap pukul 3 pagi setiap tanggal 30, maka berikut adalah entri yang harus anda masukan:
+<pre>0 3 30 * * /path/to/script.sh</pre>
+Begitu anda telah selesai memasukan entri untuk penjadwalan pada crontab, maka tugas anda telah selesai, biarkan cron daemon yang menjalankan script download sesuai dengan jadwal yang telah anda tentukan :)
+
+Berikut adalah beberapa sumber bacaan yang dapat gunakan untuk referensi lebih jauh mengenai materi pada artikel ini:
+<ul>
+	<li><a title="Manual wget" href="http://www.gnu.org/software/wget/manual/wget.html" target="_blank">Manual wget</a></li>
+	<li><a href="http://freeos.com/guides/lsst/" target="_blank">Shell script tutorial</a></li>
+	<li><a href="http://kevin.vanzonneveld.net/techblog/article/schedule_tasks_on_linux_using_crontab/" target="_blank">Crontab tutorial</a></li>
+</ul>
+Semoga bermanfaat :)

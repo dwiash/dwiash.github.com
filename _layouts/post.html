@@ -17,7 +17,7 @@ layout: default
 	</li>
 </ul>
 				
-<span id="date">{{ page.date }}</span>
+<span id="date">{{ page.date | date_to_string }}</span>
 <h2>{{ page.title }}</h2>
 
 {{ content }}

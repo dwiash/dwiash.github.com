@@ -1,0 +1,11 @@
+--
+layout: post
+title: Migrasi Dari WordPress Ke Github Page (+Jekyll)
+--
+
+Beberapa hari yang lalu akun hosting yang saya pakai untuk meng-hosting blog saya telah kadaluarsa. Dan dengan menimbang keseriusan saya dalam blogging, akhirnya saya memutuskan untuk tidak memperpanjang akun hosting tersebut. Sebagai gantinya saya akan meng-host berbagai file-file serta tulisan saya di Github page ini.
+
+Sebenarnya jika ditilik-tilik lebih lanjut, menggunakan github page bukanlah solusi yang cerdas untuk meng-host sebuah situs blog. Masih ada blog provider lain yang menawarkan fitur-fitur yang keren. Diantaranya tumblr yang sedang digemari oleh para penduduk jagat maya. Posterous dengan fitur post-by-mail-nya yang saya nilai sebagai blogging platform paling inovatif. Atau bahkan wordpress.com yang sebenarnya akan lebih mudah bagi saya, karena blog saya sebelumnya menggunakan WordPress. Namun dengan beberapa alasan, diantaranya agar terasa lebih keren akhirnya saya memutuskan menggunakan Github Page.
+
+Jika Anda juga tertarik menggunakan Github page, anda dapat membaca pengantarnya pada situs berikut ini: http://pages.github.com
+
